@@ -38,7 +38,7 @@ def mensagem_acertou():
     print('\n ★ 𝐏𝐀𝐑𝐀𝐁É𝐍𝐒, 𝐕𝐎𝐂Ê 𝐀𝐂𝐄𝐑𝐓𝐎𝐔 𝐀 𝐄𝐒𝐓𝐑𝐄𝐋𝐀 ★')
 
 def mensagem_errou():
-    print("\n𝐏𝐔𝐓𝐒, 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐄𝐑𝐑𝐀𝐃𝐀 :( ")
+    print("\n𝐏𝐔𝐓𝐒, 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐄𝐑𝐑𝐀𝐃𝐀 ")
 
 def texto_de_introducao():
     '''ESSA FUNÇÃO SERVE PARA EXIBIR UM TEXTO DE BOAS VINDAS AO USUARIO
