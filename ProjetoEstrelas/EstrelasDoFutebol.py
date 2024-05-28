@@ -41,8 +41,8 @@ def mensagem_errou():
     print("\n𝐏𝐔𝐓𝐒, 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐄𝐑𝐑𝐀𝐃𝐀 ")
 
 def texto_de_introducao():
-    '''ESSA FUNÇÃO SERVE PARA EXIBIR UM TEXTO DE BOAS VINDAS AO USUARIO
-    - EXIBE O NOME DO USUARIO
+    '''Essa função serve para exibir um texto de boas-vindas ao usuário.
+    - Exibir o nome do usuário.
     '''
     introducao1 = f'SEJA BEM-VINDO(A) USUÁRIO(A): {usuario.title()}'
     introducao2 = 'ESSE É UM SIMPLES JOGO DE ADIVINHAÇÃO DAS ESTRELAS DO FUTEBOL'
