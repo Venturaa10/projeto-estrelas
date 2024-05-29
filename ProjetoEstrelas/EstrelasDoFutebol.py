@@ -1,16 +1,16 @@
-# JOGO DE ADIVINHAÇÃO DAS ESTRELAS DO FUTEBOL
+# Jogo de adivinhação das estrelas do futebol.
+
 import os
 
 def limpando_terminal():
-    '''ESSA FUNÇÃO SERVE PARA LIMPAR O TERMINAL E EVITAR POLUIÇÃO VISUAL NO TERMINAL'''
+    '''Essa função serve para limpar o terminal e evitar poluição visual no terminal.'''
     os.system('cls')
     
     
-
 def validando_nome():
-    '''FUNÇÃO RESPONSAVEL POR VALIDAR O NOME DO USUARIO!
-    - EVITAR QUE O USUARIO ENTRE NO JOGO COM O CAMPO NOME VAZIO
-    - Metodo Strip -> Retira os espaços vazios do input
+    '''Função responsável por validar o nome do usuário:
+    - Evitar que o usuário entre no jogo com o campo nome vazio.
+    - Método strip -> Retira os espaços vazios do input.
     '''
     global usuario
     usuario = input("Digite o seu nome: ")
@@ -23,7 +23,7 @@ def validando_nome():
             return validando_nome()
 
 def sair_do_jogo():
-    '''FUNÇÃO PARA LIMPAR TERMINAL E MENSAGEM DE LOGOUT DO USUARIO'''
+    '''Função responsavel por limpar o terminal e exibir a mensagem de logout ao usuario'''
     limpando_terminal()
     print('OBRIGADO POR JOGAR :)\n'.upper())
     
@@ -41,8 +41,8 @@ def mensagem_errou():
     print("\n𝐏𝐔𝐓𝐒, 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐄𝐑𝐑𝐀𝐃𝐀 ")
 
 def texto_de_introducao():
-    '''ESSA FUNÇÃO SERVE PARA EXIBIR UM TEXTO DE BOAS VINDAS AO USUARIO
-    - EXIBE O NOME DO USUARIO
+    '''Essa função serve para exibir um texto de boas-vindas ao usuário.
+    - Exibir o nome do usuário.
     '''
     introducao1 = f'SEJA BEM-VINDO(A) USUÁRIO(A): {usuario.title()}'
     introducao2 = 'ESSE É UM SIMPLES JOGO DE ADIVINHAÇÃO DAS ESTRELAS DO FUTEBOL'
@@ -55,7 +55,7 @@ def texto_de_introducao():
     input('\nDigite uma tecla para acessar as regras do jogo: ')
 
 def regras_do_jogo():
-    '''ESSA FUNÇÃO EXIBE AS REGRAS DO JOGO'''
+    '''Essa função exibe as regras do jogo'''
     limpando_terminal()
     print('''
 ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
@@ -74,10 +74,10 @@ def regras_do_jogo():
     retorna_ao_menu()
 
 def texto_opcao():
-    '''ESSA FUNÇÃO EXIBE AS OPÇÕES DISPONIVEIS PARA O USUARIO ESCOLHER
-    - OPÇÕES PARA ACESSAR O QUIZ DE DETERMINADO JOGADOR
-    - OPÇÃO PARA LOGOUT
-    - OPÇÃO PARA ACESSAR AS REGRAS NOVAMENTE
+    '''Essa função exibe as opções disponíveis para o usuário escolher:
+    - Opções para acessar o quiz de determinado jogador.
+    - Opção para logout.
+    - Opção para acessar as regras novamente.
     '''
     limpando_terminal()
     texto = '---------> JOGO INICIALIZADO <---------'
@@ -98,7 +98,7 @@ def texto_opcao():
 ''')    
 
 def texto_dicas():
-    '''FUNÇÃO RESPONSAVEL POR EXIBIR O SUBTITULO DE DICAS DO JOGADOR'''
+    '''Função responsavel por exibir o subtitulo de dicas do jogador'''
     limpando_terminal()
     texto = '!dicas do jogador!'
     linha = '*' * (len(texto)) #O '*' será de acordo com o tamanho do texto
@@ -107,12 +107,12 @@ def texto_dicas():
     print(linha)
 
 def opcao_invalida():
-    '''FUNÇAÕ RESPONSAVEL POR RETORNAR AO MENU CASO O USUARIO DIGITE UMA OPÇÃO INVALIDA'''
+    '''Função responsavel por retornar ao menu caso o usuaio digite uma opção invalida'''
     limpando_terminal()
     retorna_ao_menu()
 
 def jogador_neymar(): 
-    '''DICAS DO NEYMAR'''
+    '''Exibe as dicas do neymar'''
     limpando_terminal()
     texto_dicas()
     print('''
@@ -124,7 +124,7 @@ def jogador_neymar():
 '''.upper())
 
 def jogador_messi():
-    '''DICAS DO MESSI'''
+    '''Exibe as dicas do Messi'''
     limpando_terminal()
     texto_dicas()
     print(''' 
@@ -136,7 +136,7 @@ def jogador_messi():
 '''.upper())
 
 def jogador_cristiano_ronaldo():
-    '''DICAS DO CR7'''
+    '''Exibe as dicas do CR7'''
     limpando_terminal()
     texto_dicas()
     print('''
@@ -149,9 +149,8 @@ def jogador_cristiano_ronaldo():
 
 
 def jogo():
-    '''FUNÇÃO RESPONSAVEL PELA EXECUÇÃO DOS CÓDIGOS APÓS A ESCOLHA DO USUARIO
-    - TRATAMENTO DE ERRO COM TRY E EXCEPT CASO O USUARIO DIGITE UMA OPÇÃO INVALIDA
-    '''
+    '''Função responsavel pela execução dos codigos após a escolha do usuario
+    - Tratamento de erro com Try e Except caso o usuario digite uma opção invalida'''
     try:
         opcao_escolhida = int(input('Selecione um número para selecionar o jogador secreto: ').strip()) 
         
